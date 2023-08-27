@@ -10,6 +10,7 @@ This repo contains the official implementations of the two papers:
 + **[2023.02]** 🎉 TVTS is accepted to CVPR 2023.
 + **[2023.03]** The official code of TVTS has been released.
 + **[2023.05]** 🚀 TVTSv2 is comming out! Please refer to [this link](https://arxiv.org/abs/2305.14173) for details. 
++ **[2023.08]** The official code of TVTSv2 and the pre-trained models have been released. All zero-shot evaluations are available on a single GPU. We provide scripts for extracting your own video features. Try it now 😎!
 
 ## Introduction
 

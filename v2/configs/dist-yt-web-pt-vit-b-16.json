@@ -1,0 +1,83 @@
+{
+  "name": "yttemporal",
+  "n_gpu": 8,
+  "arch": {
+    "type": "TVTSv2_B_16",
+    "args": {
+      "load_checkpoint": ""
+    }
+  },
+  "data_loader": [
+    {
+      "type": "MultiDistTextVideoDataLoader",
+      "args": {
+        "dataset_name": "YTTemporal",
+        "data_dir": "data/YTTemporal",
+        "reader": "cv2",
+        "patches_per_frame": 196,
+        "mask_ratio": 0.5,
+        "shuffle": true,
+        "num_workers": 16,
+        "batch_size": 12,
+        "split": "train",
+        "cut": "2M",
+        "subsample": 1,
+        "text_params": {
+          "input": "text"
+        },
+        "video_params": {
+          "input_res": 224,
+          "num_frames": 3,
+          "loading": "lax"
+        }
+      }
+    },
+    {
+      "type": "MultiDistTextVideoDataLoader",
+      "args": {
+        "dataset_name": "WebVid",
+        "data_dir": "data/WebVid/",
+        "reader": "decord",
+        "patches_per_frame": 196,
+        "mask_ratio": 0.5,
+        "shuffle": true,
+        "num_workers": 16,
+        "batch_size": 12,
+        "split": "train",
+        "cut": "2M",
+        "subsample": 1,
+        "text_params": {
+          "input": "text"
+        },
+        "video_params": {
+          "input_res": 224,
+          "num_frames": 12,
+          "loading": "lax"
+        }
+      }
+    }
+  ],
+  "loss": {
+    "type": "NormSoftmaxLoss",
+    "args": {
+    }
+  },
+  "metrics": [
+    "t2v_metrics",
+    "v2t_metrics"
+  ],
+  "trainer": {
+    "epochs": 10,
+    "max_samples_per_epoch": 1000000,
+    "save_dir": "./results/TVTSv2",
+    "save_period": 1,
+    "verbosity": 2,
+    "monitor": "min val_loss_0",
+    "early_stop": 10,
+    "init_val": true,
+    "neptune": false
+  },
+  "visualizer": {
+    "type": ""
+  }
+}

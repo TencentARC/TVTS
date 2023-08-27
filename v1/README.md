@@ -22,11 +22,19 @@ This repo is the official implementation of the paper [Learning Transferable Spa
 
 ## Instruction
 
+### Environment Setup
+
+Before you start, run the following command to set up your Python environment.
+
+```bash
+pip install -r requirements.txt
+```
+
 ### Dataset Preparation
 
 #### Pre-training Datasets
 
-1. Download YT-Temporal from [here](https://rowanzellers.com/merlot), and put the dataset under the folder  `data/YTTemporal`.
+1. Download YT-Temporal from [here](https://rowanzellers.com/merlot/), and put the dataset under the folder  `data/YTTemporal`.
 2. Download WebVid-2M from [here](https://github.com/m-bain/webvid), and put the dataset under the folder `data/WebVid`.
 3. Download CC3M from [here](https://ai.google.com/research/ConceptualCaptions/download), and put the dataset under the folder `data/CC3M`.
 4. Download the split file from [here](https://drive.google.com/file/d/1Y2-CkRVymrORUrSE2whcf3i9hKa2NbcP/view?usp=sharing), and unzip it in the root directory.

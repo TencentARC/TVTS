@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5a90e06d-5f04-4b51-8b9b-36c45a48af04" name="DevGPU">
+        <fileTransfer rootFolder="/group/30042/ziyunzeng" accessType="SFTP" host="9.134.229.177" port="36000" sshConfigId="f159ccc5-64cf-4187-8bc2-bebd2cc6d40d" sshConfig="Tencent-DevGPU">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" isUseRsync="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>Tencent</name>
+        <servers>
+          <name value="DevGPU" />
+        </servers>
+      </group>
+    </groups>
+  </component>
+</project>

@@ -33,7 +33,7 @@ class SSVideoClsDataset(Dataset):
         self.args = args
         self.aug = False
         self.rand_erase = False
-        self.video_dir = '/group/30042/public_datasets/SSV2/videos'
+        self.video_dir = 'data/SSV2/videos'
         if self.mode in ['train']:
             self.aug = True
             if self.args.reprob > 0:

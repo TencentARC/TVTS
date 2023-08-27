@@ -14,7 +14,7 @@
         "input": "text"
       },
       "projection": "minimal",
-      "load_checkpoint": "./TVTS_yt_cc_web_pt.pth"
+      "load_checkpoint": ""
     }
   },
   "data_loader": [

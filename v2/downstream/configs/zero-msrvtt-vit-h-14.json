@@ -1,0 +1,58 @@
+{
+  "name": "MSRVTT",
+  "n_gpu": 8,
+  "arch": {
+    "type": "TVTSv2_H_14",
+    "args": {
+      "load_checkpoint": "TVTSv2_ViT_H_14.pth"
+    }
+  },
+  "data_loader": {
+    "type": "TextVideoDataLoader",
+    "args": {
+      "dataset_name": "MSRVTT",
+      "data_dir": "data/msrvtt",
+      "reader": "decord",
+      "patches_per_frame": 256,
+      "mask_ratio": 0,
+      "shuffle": false,
+      "num_workers": 16,
+      "batch_size": 48,
+      "split": "test",
+      "cut": "jsfusion",
+      "subsample": 1,
+      "text_params": {
+        "input": "text"
+      },
+      "video_params": {
+        "extraction_fps": 25,
+        "extraction_res": 256,
+        "input_res": 224,
+        "num_frames": 12,
+        "stride": 1
+      }
+    }
+  },
+  "loss": {
+    "type": "NormSoftmaxLoss",
+    "args": {}
+  },
+  "metrics": [
+    "t2v_metrics",
+    "v2t_metrics"
+  ],
+  "trainer": {
+    "epochs": 100,
+    "max_samples_per_epoch": 9000,
+    "save_dir": "exps",
+    "save_period": 5,
+    "verbosity": 2,
+    "monitor": "min val_loss",
+    "early_stop": 10,
+    "neptune": false
+  },
+  "visualizer": {
+    "type": "",
+    "args": {}
+  }
+}

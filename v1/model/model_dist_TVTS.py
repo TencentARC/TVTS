@@ -10,7 +10,7 @@ import torch
 import timm
 import os
 import numpy as np
-from model.SortFormer import SortTransformer
+from model.sort_transformer import SortTransformer
 from model.video_encoder import VisionTransformer
 import math
 
@@ -93,7 +93,6 @@ class TVTS(BaseModel):
         self.device = device
 
     def forward(self, data, return_embeds=True):
-
         text_data = data['text']
         video_data = data['video']
         keep_ind = data['keep_ind']
