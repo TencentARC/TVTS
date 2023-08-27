@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ### Dataset Preparation
 
-##### Dataset Splits
+#### Dataset Splits
 
 We have uploaded the dataset splits on Google Drive. Download it from [this link](https://drive.google.com/file/d/1EOdB1MmPUHvHDW2le7WbAC1fbDV6LOTM/view?usp=sharing) and unzip it in the root directory.
 
