@@ -27,7 +27,7 @@ This repo is the official implementation of the paper [TVTSv2: Learning Out-of-t
 Before you start, run the following command to set up your Python environment.
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 ### Dataset Preparation
@@ -76,7 +76,7 @@ We use up to 80 NVIDIA V100 GPUs for pre-training. The detailed hyper-parameters
 
 #### Downstream Evaluation
 
-We have released our pre-trained model on Google Drive in the following links to quickly reproduce the results reported in our paper.
+We have released our pre-trained models on Google Drive in the following links to quickly reproduce the results reported in our paper.
 
 1. TVTSv2_B_32: https://drive.google.com/file/d/1zNHgqioo-aRUwZXPyTDiRT2uaRrnk386/view?usp=sharing
 2. TVTSv2_B_16: https://drive.google.com/file/d/1HKc7aGwMd5jhVaYztuY-jbmYqiz_wvWF/view?usp=sharing
