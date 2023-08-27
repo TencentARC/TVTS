@@ -27,7 +27,7 @@ This repo is the official implementation of the paper [Learning Transferable Spa
 Before you start, run the following command to set up your Python environment.
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 ### Dataset Preparation
